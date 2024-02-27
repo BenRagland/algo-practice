@@ -37,6 +37,11 @@ button:active{
     transform: translate(3px,2px);
 }
 
+
+/* Solutions Area */
+.solutions-area{
+    padding: 2em;
+}
 .card-body, form{
     text-align:left;
     border:solid 2px black;
