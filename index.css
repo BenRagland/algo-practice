@@ -17,7 +17,7 @@ header{
     width:33%;
 
 }
-input{
+input, textarea{
     display: flex;
     margin: .25em auto;
     padding: .5em .5em;
@@ -26,7 +26,7 @@ input{
 
 button{
     display: block;
-    margin: .75em auto 0 auto;
+    margin: 1.25em auto 0 auto;
     border-radius: 7px;
     border:none;
     color: rgb(255, 233, 197);
@@ -48,6 +48,7 @@ button:active{
 .card-body h4 , h6{ 
     font-size: 1.25rem;
     margin: 0 0;
+    color:rgb(83, 30, 147)
 }
 .card-body p{
     
