@@ -11,11 +11,33 @@ header{
 }
 
 
-.solutions-area{
-    
+.input-area form{
+    margin: 0 auto 3em auto;
+    padding: 2em 1em;
+    width:33%;
+
+}
+input{
+    display: flex;
+    margin: .25em auto;
+    padding: .5em .5em;
 }
 
-.card-body{
+
+button{
+    display: block;
+    margin: .75em auto 0 auto;
+    border-radius: 7px;
+    border:none;
+    color: rgb(255, 233, 197);
+    background-color: black;
+    padding: .5em 1em;
+}
+button:active{
+    transform: translate(3px,2px);
+}
+
+.card-body, form{
     text-align:left;
     border:solid 2px black;
     background-color: rgb(255, 233, 197);
