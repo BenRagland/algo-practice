@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 "accept" : "application/json"
                 },
             body : JSON.stringify({
+                
                 "algoName": algoName,
                 "algoExplain": explanation,
                 "pseudo": pseudo,
@@ -44,19 +45,16 @@ document.addEventListener("DOMContentLoaded", () =>{
         
         .then(res => {
             if (res.ok){
-                res.json()
+                return res.json()
             }else{
                 alert("server error", res)
             }
         })
         .then(cardData => {
             console.log(cardData)
-            // renderCard(cardData)
-        })
-                   
+        })   
         .catch(  err => alert("No Server Response", err))
         
-
     })
 
     function renderCard(cardData){
@@ -72,9 +70,49 @@ document.addEventListener("DOMContentLoaded", () =>{
             <p>${cardData.pseudo}</p>
             <h6>Javascript</h6>
             <p>${cardData.java}</p>
-        
+            <div class="edit-delete">
+                <button id="deleteBtn" > Delete</button>
+                <button id="editBtn" > Edit</button>
+            </div>
         `
         solutionsArea.appendChild(algoCard)
+
+        // Edit and Delete Buttons
+        //document.querySelector("button #deleteBtn").addEventListener("click",(e)=>{
+            // cardData.id
+            // console.log("delete clicked")
+            // deleteFetch(cardData.id)
+
+            fetch(`http://localhost:3000/algos`,{
+            method: "DELETE" ,
+            headers:{
+                "content-type": "application/json",
+                "accept" : "application/json"
+                },
+        })
+        
+        .then(res => {
+            if (res.ok){
+                return res.json()
+            }else{
+                alert("server error", res)
+            }
+        })
+        .then(cardData => {
+            console.log(cardData)
+        })   
+        .catch(  err => alert("No Server Response", err))
+
+        })
+
+        // Edit Button Fetch
+        // editFetch()
+        document.getElementById("editBtn").addEventListener("click",()=>{
+
+
+
+        })
+
     }
 
     

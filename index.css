@@ -53,6 +53,8 @@ button:active{
     width: 33%;
     padding: .5em;
     border-radius: 11px;
+
+    position: relative;
 }
 .card-body h4 , h6{ 
     font-size: 1.25rem;
@@ -60,7 +62,16 @@ button:active{
     color:rgb(83, 30, 147)
 }
 .card-body p{
-    
-    font-size: .9rem;
-    
+    font-size: .9rem; 
+    margin: .25em auto 1em auto;
+}
+.card-body p:nth-child(8){
+    margin-bottom: 3em;
+}
+
+.edit-delete{
+    display: flex;
+    width: 33%;
+    position:absolute;
+    bottom: 5px;
 }

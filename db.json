@@ -6,19 +6,26 @@
       "pseudo": "Write the pseudo",
       "java": "The javascript"
     },
-   {
-      "id": "7bab",
-      "algoName": "",
-      "algoExplain": "dsfsd",
-      "pseudo": "dfd",
-      "java": "fdsf"
+    {
+      "id": "5bf9",
+      "algoName": "Binary Search",
+      "algoExplain": "This Search is similar to the way look up a word in the dictionary. You split the book and keep splitting until you find the word.\n\n",
+      "pseudo": "1. You split the dictionary in half.\n\n2.If above the word you split the left half of the book in half again.\n\n3. If below the word you split the right half of the book in half again.\n\n3. Repeat the process until you find it. A.K.A the middle element of the farthest number of book splits.",
+      "java": "function binarySolution( list1, target, start, end){\n\n    const middleIndex = Math.floor(( end + start) / 2)\n    \n    if (start > end ){\n        console.log( \"Not Found\")\n    }\n\n    if(list1[middleIndex] === target){\n        console.log( `found at ${list1[middleIndex]}` )\n    }\n\n    if(list1[middleIndex] > target){\n        return binarySolution(list1 , target, start, middleIndex-1)\n        console.log(\"middle larger than target\")\n    }\n\n     if(list1[middleIndex] < target){\n       return  binarySolution(list1,target, middleIndex+1,end)\n         console.log(\"middle smaller that target\")\n    }\n    \n    \n    \n}"
     },
     {
-      "id": "2ef6",
+      "id": "a033",
+      "algoName": "titld",
+      "algoExplain": "Eplaskjf",
+      "pseudo": "lksjfsf",
+      "java": "lkjsdf "
+    },
+    {
+      "id": "d17f",
       "algoName": "",
-      "algoExplain": "fdg",
-      "pseudo": "fdg",
-      "java": "fdf"
+      "algoExplain": "dfdsfd",
+      "pseudo": "sdfsdf",
+      "java": "sdfsd"
     }
   ]
 }
